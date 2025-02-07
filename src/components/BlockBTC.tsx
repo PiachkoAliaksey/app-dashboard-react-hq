@@ -1,4 +1,4 @@
-import data from '../data/data.min.json'
+import data from '../data/data.min.json';
 
 const BlockBTC = () => {
     return (

@@ -1,14 +1,13 @@
 export type TBarBots = {
-    currentInterval: string,
     setCurrentBot:React.Dispatch<React.SetStateAction<string | number>>,
     currentBot:string|number
 }
 
 export type TItem = {
-    item: { [key: string]: string | number },
+    item: { [key: string]: string|number},
     currentInterval: string,
     handlerClickBot: (bot: string|number) => void,
-    currentBot:string|number
+    currentBot:string
 }
 
 export type TSwitchBar = {

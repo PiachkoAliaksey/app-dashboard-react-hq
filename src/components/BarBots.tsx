@@ -1,13 +1,14 @@
 import dataBots from '../data/data.min.json';
 
 import CardBot from './CardBot';
-import { TBarBots } from '../types';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 
-const BarBots = ({ currentInterval,setCurrentBot,currentBot }: TBarBots) => {
+const BarBots = () => {
+    const [currentInterval] = useLocalStorage('interval', 'all_time');
+    const [currentBot,setCurrentBot] = useLocalStorage('bot', 'yellow_bot');
 
-
-    const handlerClickBot = (bot: string | number) => {
+    const handlerClickBot = (bot: string|number ) => {
         setCurrentBot(bot)
     }
 
