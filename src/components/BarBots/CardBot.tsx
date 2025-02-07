@@ -1,6 +1,6 @@
-import { isRedColor } from '../utils/isRedColor';
-import { TItem } from '../types';
-import { mapNameBots,mapNameBotsColor } from '../data';
+import { isRedColor } from '../../utils/isRedColor';
+import { TItem } from '../../types';
+import { mapNameBots,mapNameBotsColor } from '../../data';
 
 
 const CardBot = ({ item, currentInterval, handlerClickBot,currentBot }: TItem) => {

@@ -1,41 +1,42 @@
 import { List, ChartNetwork, ShoppingCart, CircleDollarSign, Cog } from 'lucide-react';
+import { generateSale } from '../utils/generateSales';
 
 export const dataCharts: Record<string, {}[]> = {
     yellow_bot: [
-        { name: '22.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '23.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '25.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '26.04', sales: Math.floor(Math.random() * 10000) },
+        { name: '22.04', sales: generateSale() },
+        { name: '23.04', sales: generateSale() },
+        { name: '25.04', sales: generateSale() },
+        { name: '26.04', sales: generateSale() },
     ],
     white_bot: [
-        { name: '22.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '23.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '25.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '26.04', sales: Math.floor(Math.random() * 10000) },
+        { name: '22.04', sales: generateSale() },
+        { name: '23.04', sales: generateSale() },
+        { name: '25.04', sales: generateSale() },
+        { name: '26.04', sales: generateSale() },
     ],
     green_bot: [
-        { name: '22.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '23.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '25.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '26.04', sales: Math.floor(Math.random() * 10000) },
+        { name: '22.04', sales: generateSale() },
+        { name: '23.04', sales: generateSale() },
+        { name: '25.04', sales: generateSale() },
+        { name: '26.04', sales: generateSale() },
     ],
     red_bot: [
-        { name: '22.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '23.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '25.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '26.04', sales: Math.floor(Math.random() * 10000) },
+        { name: '22.04', sales: generateSale() },
+        { name: '23.04', sales: generateSale() },
+        { name: '25.04', sales: generateSale() },
+        { name: '26.04', sales: generateSale() },
     ],
     blue_bot: [
-        { name: '22.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '23.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '25.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '26.04', sales: Math.floor(Math.random() * 10000) },
+        { name: '22.04', sales: generateSale() },
+        { name: '23.04', sales: generateSale() },
+        { name: '25.04', sales: generateSale() },
+        { name: '26.04', sales: generateSale() },
     ],
     orange_bot: [
-        { name: '22.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '23.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '25.04', sales: Math.floor(Math.random() * 10000) },
-        { name: '26.04', sales: Math.floor(Math.random() * 10000) },
+        { name: '22.04', sales: generateSale() },
+        { name: '23.04', sales: generateSale() },
+        { name: '25.04', sales: generateSale() },
+        { name: '26.04', sales: generateSale() },
     ],
 }
 

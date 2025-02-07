@@ -1,5 +1,5 @@
-import dataBots from '../data/data.min.json';
-import { TBarBots } from '../types';
+import dataBots from '../../data/data.min.json';
+import { TBarBots } from '../../types';
 
 import CardBot from './CardBot';
 
