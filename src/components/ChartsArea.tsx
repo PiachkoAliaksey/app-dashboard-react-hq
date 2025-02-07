@@ -1,10 +1,9 @@
 import { AreaChart, Area, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { dataCharts } from '../data';
-import { useLocalStorage } from '../hooks/useLocalStorage';
 
 
-const ChartsArea = () => {
-    const [currentBot] = useLocalStorage('bot', 'yellow_bot');
+const ChartsArea = ({ currentBot }: { currentBot: string }) => {
+
 
     return (
         <div className='h-50 w-full'>

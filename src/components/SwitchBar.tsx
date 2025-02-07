@@ -1,10 +1,9 @@
 import { dataInterval } from "../data";
 import { mapDataInterval } from "../data";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import { TSwitchBar } from "../types";
 
 
-const SwitchBar = () => {
-const [currentInterval, setCurrentInterval] = useLocalStorage('interval', 'all_time');
+const SwitchBar = ({currentInterval,setCurrentInterval}:TSwitchBar) => {
 
     const handleClick = (interval: string) => {
         setCurrentInterval(interval)
