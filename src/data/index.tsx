@@ -1,6 +1,13 @@
 import { List, ChartNetwork, ShoppingCart, CircleDollarSign, Cog } from 'lucide-react';
 import { generateSale } from '../utils/generateSales';
 
+import yellow_bot from '../assets/bot/yellow_bot.png';
+import red_bot from '../assets/bot/red_bot.png';
+import green_bot from '../assets/bot/green_bot.png';
+import orange_bot from '../assets/bot/orange_bot.png';
+import blue_bot from '../assets/bot/blue_bot.png';
+import white_bot from '../assets/bot/purple_bot.png';
+
 export const dataCharts: Record<string, {}[]> = {
     yellow_bot: [
         { name: '22.04', sales: generateSale() },
@@ -72,3 +79,12 @@ export const mapNameBotsColor: Record<string, string> = {
 
 
 export const dataBarFooter = [{ title: 'Dashboard', icon: <List /> }, { title: 'Megabot', icon: <ChartNetwork /> }, { title: 'Botmarket', icon: <ShoppingCart /> }, { title: 'Coin prices', icon: <CircleDollarSign /> }, { title: 'Profile', icon: <Cog /> }]
+
+export const mapBotImage:Record<string, string> = {
+    "yellow_bot": yellow_bot,
+    "white_bot": white_bot,
+    "green_bot": green_bot,
+    "red_bot": red_bot,
+    "blue_bot": blue_bot,
+    "orange_bot": orange_bot,
+}
