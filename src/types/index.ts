@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export type TBarBots = {
     setCurrentBot:React.Dispatch<React.SetStateAction<string | number>>,
     currentBot:string|number,
@@ -14,4 +16,11 @@ export type TItem = {
 export type TSwitchBar = {
     setCurrentInterval: React.Dispatch<React.SetStateAction<string|number>>,
     currentInterval: string
+}
+
+export type TCardFooter = {
+    title: string,
+    icon: ReactNode,
+    currentCard: string,
+    setCurrentCard: React.Dispatch<React.SetStateAction<string>>
 }
