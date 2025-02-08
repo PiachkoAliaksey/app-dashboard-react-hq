@@ -7,6 +7,9 @@ import BarBots from './components/BarBots/BarBots';
 import SwitchBar from './components/SwitchBar';
 import BarFooter from './components/BarFooter/BarFooter';
 import { useLocalStorage } from './hooks/useLocalStorage';
+import dataBots from './data/data.min.json';
+import useDataFetch from './hooks/useMockFetch';
+
 
 
 
@@ -14,6 +17,7 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 function App() {
   const [currentInterval, setCurrentInterval] = useLocalStorage('interval', 'all_time');
   const [currentBot, setCurrentBot] = useLocalStorage('bot', 'yellow_bot');
+  const [isLoading, data] = useDataFetch();
 
   const handlerClickBot = (bot: string | number) => {
     setCurrentBot(bot)
@@ -25,11 +29,11 @@ function App() {
 
 
   return (
-    <div className='flex relative flex-col h-screen bg-sky-950 text-green-100 font-[Roboto]'>
+    <div className='flex relative flex-col h-full bg-sky-950 text-green-100 font-[Roboto] md:h-screen'>
       <NavBar />
       <BlockBTC />
       <ChartsArea currentBot={currentBot} />
-      <BarBots handlerClickBot={handlerClickBot} currentBot={currentBot} currentInterval={currentInterval} />
+      <BarBots isLoading={isLoading} dataBots={data} handlerClickBot={handlerClickBot} currentBot={currentBot} currentInterval={currentInterval} />
       <SwitchBar currentInterval={currentInterval} handlerClickInterval={handlerClickInterval} />
       <BarFooter />
     </div>
