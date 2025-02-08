@@ -12,8 +12,16 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 
 
 function App() {
-  const [currentInterval,setCurrentInterval] = useLocalStorage('interval', 'all_time');
+  const [currentInterval, setCurrentInterval] = useLocalStorage('interval', 'all_time');
   const [currentBot, setCurrentBot] = useLocalStorage('bot', 'yellow_bot');
+
+  const handlerClickBot = (bot: string | number) => {
+    setCurrentBot(bot)
+  }
+
+  const handlerClickInterval = (interval: string) => {
+    setCurrentInterval(interval)
+  }
 
 
   return (
@@ -21,8 +29,8 @@ function App() {
       <NavBar />
       <BlockBTC />
       <ChartsArea currentBot={currentBot} />
-      <BarBots setCurrentBot={setCurrentBot} currentBot={currentBot} currentInterval={currentInterval} />
-      <SwitchBar currentInterval={currentInterval} setCurrentInterval={setCurrentInterval} />
+      <BarBots handlerClickBot={handlerClickBot} currentBot={currentBot} currentInterval={currentInterval} />
+      <SwitchBar currentInterval={currentInterval} handlerClickInterval={handlerClickInterval} />
       <BarFooter />
     </div>
   )

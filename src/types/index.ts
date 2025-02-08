@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 
 export type TBarBots = {
-    setCurrentBot:React.Dispatch<React.SetStateAction<string | number>>,
+    handlerClickBot:(bot: string | number) => void,
     currentBot:string|number,
     currentInterval:string
 }
@@ -14,7 +14,7 @@ export type TItem = {
 }
 
 export type TSwitchBar = {
-    setCurrentInterval: React.Dispatch<React.SetStateAction<string|number>>,
+    handlerClickInterval:(interval: string) => void ,
     currentInterval: string
 }
 
