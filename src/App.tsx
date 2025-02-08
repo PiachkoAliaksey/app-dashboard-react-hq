@@ -28,7 +28,7 @@ function App() {
 
 
   return (
-    <div className='flex relative flex-col h-full bg-sky-950 text-green-100 font-[Roboto] md:h-screen'>
+    <div className='flex relative flex-col min-h-screen bg-sky-950 text-green-100 font-[Roboto]'>
       <NavBar />
       <BlockBTC />
       <ChartsArea currentBot={currentBot} />
