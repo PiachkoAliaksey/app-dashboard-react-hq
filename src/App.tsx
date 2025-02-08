@@ -7,7 +7,6 @@ import BarBots from './components/BarBots/BarBots';
 import SwitchBar from './components/SwitchBar';
 import BarFooter from './components/BarFooter/BarFooter';
 import { useLocalStorage } from './hooks/useLocalStorage';
-import dataBots from './data/data.min.json';
 import useDataFetch from './hooks/useMockFetch';
 
 
